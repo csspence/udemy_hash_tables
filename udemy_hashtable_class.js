@@ -6,7 +6,7 @@ class HashTable {
   constructor(size=53) {
     this.keyMap = new Array(size);
   }
-
+  
   _hash(key) {
     let total = 0;
     let WEIRD_PRIME = 31;
@@ -17,7 +17,7 @@ class HashTable {
     }
     return total;
   }
-
+  
   set(key, value) {
     let hashed = this._hash(key);
     if(!this.keyMap[hashed]) {
