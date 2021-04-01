@@ -25,4 +25,17 @@ class HashTable {
     }
     this.keyMap[hashed].push([key, value]);
   }
+
+  get(key) {
+    let hashed = this._hash(key);
+    if(this.keyMap[hashed].length === 1) {
+      return this.keyMap[hashed][0];
+    } else {
+      for(let i = 0; i < this.keyMap[hashed].length; i++) {
+        if(this.keyMap[hashed][i][0] === key) {
+          return this.keyMap[hashed][i];
+        }
+      }
+    }
+  }
 }
