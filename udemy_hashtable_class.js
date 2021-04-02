@@ -3,7 +3,7 @@ This is the HashTable class from the Udemy Data Structures & Algorithms course.
 */
 
 class HashTable {
-  constructor(size=53) {
+  constructor(size=55) {
     this.keyMap = new Array(size);
   }
   
